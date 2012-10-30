@@ -14,10 +14,5 @@ namespace Lektion32.Models.Entities
         public string Email { get; set; }
         public string PasswordHash { get; set; }
         public string Salt { get; set; }
-
-        public void NotifyByEmail(string Subject, string Message)
-        {
-            // Not implemented: This method should send an email to the user with subject and message
-        }
     }
 }
