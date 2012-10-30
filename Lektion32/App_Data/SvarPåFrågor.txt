@@ -11,3 +11,7 @@ B. bör hanteras genom repo metoder, med anrop utanför klassen (ej i klassmetod
 C. bör hanteras separat t.ex. i en EmailHelper-klass, med anrop utanför klassen (ej i klassmetoder)
 
 3. En annan anledning är att Repository-klassen skall hantera andra Entities, som ej är garanterade att implementera en Email-property.
+
+5. Om vi ersatt Repository<User> med UserRepository så hade programmet fungerat som tänkt och inga oönskade beteenden hade uppstått eftersom UserRepository ärver relevanta metoder från Repository<User> och alltså har samma implementation för dessa metoder.
+
+Vi följer LSP eftersom vi kan ersätta Repository<User> med den ärvda typen UserRepository utan sidoeffekter.
