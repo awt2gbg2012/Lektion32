@@ -35,3 +35,5 @@ Ett argument mot detta skulle kunna vara att behålla det som en påminnelse om 
 10. DIP används då konstruktorn för HomeControllern tar en interface-variabel, samt att den privata variabeln är en interface-variabel. Ninject binder det aktuella objektet till en konkret implementation, men HomeController har fortfarande endast beroenden mot interfacet IRepository, ej den konkreta implementationen Repository<User>
 
 En liknande implementation som ej följer DIP hade haft en privat variabel av typen Repository<User>, dvs. en konkret implementation och inte ett interface. Konstruktorn för HomeControllern hade initierat denna variabel med "_userRepo = new Repository<User();" och ej tagit någon variabel som argument.
+
+11. Vi ändrar binding i AddBindings-metoden från IRepository -> Repository till IRepository -> TestRepository. Detta hade slagit igenom i alla Controllers, t.ex. även i AccountControllern.
