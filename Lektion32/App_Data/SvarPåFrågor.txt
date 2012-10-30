@@ -25,3 +25,9 @@ Problemen med detta är att vi får en massa onödig kod i de konkreta implement
 Det kan också se ut i intellisense som att en implementation stödjer t.ex. ExportToPDF när den i själva verket inte gör det. Detta kan potentiellt leda till runtime exceptions.
 
 Interfacet förmedlar inte heller intentionen hos de olika konkreta implementationerna. T.ex. kanske det finns en god anledning att inte exportera en viss implementation till SQL - I den faktiska koden kan man få intrycket att intentionen är att det skall gå att exportera till SQL, men att det helt enkelt inte hunnits med ännu.
+
+9. Framtidssäkringen är i detta fall rakt av en dålig idé.
+
+Det finns ingen konkret implementation - allt framtidssäkringen bidrar med är extra skräpkod och i värsta fall kan det leda till att implementationer som inte behövs skapas.
+
+Ett argument mot detta skulle kunna vara att behålla det som en påminnelse om vad som är kvar att implementera. Detta är ett mycket svagt argument. Sådan information är avsevärt mycket bättre att lagra i ett verktyg som är avsett för det - t.ex. en issue-tracker, projektplaneringsverktyg eller Sprint Board. Att behålla den här typen av reminders i källkod är ett recept för att garanterat glömma av det.
