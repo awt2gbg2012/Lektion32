@@ -9,3 +9,5 @@ Klassen bör endast ansvara för A. ovan.
 
 B. bör hanteras genom repo metoder, med anrop utanför klassen (ej i klassmetoder)
 C. bör hanteras separat t.ex. i en EmailHelper-klass, med anrop utanför klassen (ej i klassmetoder)
+
+3. En annan anledning är att Repository-klassen skall hantera andra Entities, som ej är garanterade att implementera en Email-property.
