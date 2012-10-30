@@ -15,3 +15,5 @@ C. bör hanteras separat t.ex. i en EmailHelper-klass, med anrop utanför klasse
 5. Om vi ersatt Repository<User> med UserRepository så hade programmet fungerat som tänkt och inga oönskade beteenden hade uppstått eftersom UserRepository ärver relevanta metoder från Repository<User> och alltså har samma implementation för dessa metoder.
 
 Vi följer LSP eftersom vi kan ersätta Repository<User> med den ärvda typen UserRepository utan sidoeffekter.
+
+6. Om vi hade ändrat implementationen av t.ex. Save()-metoden i UserRepository så att den inte sparar data så hade vi brutit mot LSP eftersom vi då inte hade kunnat ersätta Repository<User> med UserRepository utan oönskade sidoeffekter (I det här fallet att data inte sparas).
