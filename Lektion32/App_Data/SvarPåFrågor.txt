@@ -1,0 +1,11 @@
+﻿Svar på frågor:
+
+1. Klassen ansvarar för att:
+	A. Representera en användare
+	B. Spara/Uppdatera/Ta bort en användare (Dvs. EF-operationer för användare)
+	C. Skicka Email till användare
+
+Klassen bör endast ansvara för A. ovan. 
+
+B. bör hanteras genom repo metoder, med anrop utanför klassen (ej i klassmetoder)
+C. bör hanteras separat t.ex. i en EmailHelper-klass, med anrop utanför klassen (ej i klassmetoder)
