@@ -82,7 +82,9 @@
     <Compile Include="Models\ExportableDataSet\UserStatistics.cs" />
     <Compile Include="Models\Helpers\EmailHelper.cs" />
     <Compile Include="Models\Repositories\Abstract\IRepository.cs" />
+    <Compile Include="Models\Repositories\Abstract\IUserRepository.cs" />
     <Compile Include="Models\Repositories\Repository.cs" />
+    <Compile Include="Models\Repositories\UserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
