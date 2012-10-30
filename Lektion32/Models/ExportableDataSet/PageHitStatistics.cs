@@ -6,7 +6,7 @@ using Lektion32.Models.ExportableDataSet.Abstract;
 
 namespace Lektion32.Models.ExportableDataSet
 {
-    public class PageHitStatisticsSet : IExportableSet
+    public class PageHitStatisticsSet : IStatisticsSet, IPDFExportable, IChartImageExportable
     {
         private List<object> _pageHitStatistics = new List<object>();
 
@@ -28,10 +28,5 @@ namespace Lektion32.Models.ExportableDataSet
 
             return generatedImage;
         }
-
-        public string ExportToSQL() { throw new NotImplementedException(); }
-        public byte[] ExportToExcel() { throw new NotImplementedException(); }
-        public string ExportToText() { throw new NotImplementedException(); }
-        public string ExportToCSV() { throw new NotImplementedException(); }
     }
 }

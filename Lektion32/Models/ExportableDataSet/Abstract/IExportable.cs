@@ -5,14 +5,23 @@ using System.Text;
 
 namespace Lektion32.Models.ExportableDataSet.Abstract
 {
-    public interface IExportableSet
+    public interface IStatisticsSet
     {
         int Count();
+    }
+
+    public interface IPDFExportable
+    {
         byte[] ExportToPdf();
-        string ExportToSQL();
+    }
+
+    public interface IExcelExportable
+    {
         byte[] ExportToExcel();
-        string ExportToText();
+    }
+
+    public interface IChartImageExportable
+    {
         byte[] ExportToChartImage();
-        string ExportToCSV();
     }
 }

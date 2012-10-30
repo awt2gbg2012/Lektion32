@@ -6,7 +6,7 @@ using Lektion32.Models.ExportableDataSet.Abstract;
 
 namespace Lektion32.Models.ExportableDataSet
 {
-    public class UserStatisticsSet : IExportableSet
+    public class UserStatisticsSet : IStatisticsSet, IExcelExportable
     {
         private List<object> _userStatistics = new List<object>();
 
@@ -20,11 +20,5 @@ namespace Lektion32.Models.ExportableDataSet
 
             return generatedExcel;
         }
-
-        public byte[] ExportToPdf() { throw new NotImplementedException(); }
-        public string ExportToSQL() { throw new NotImplementedException(); }
-        public string ExportToText() { throw new NotImplementedException(); }
-        public byte[] ExportToChartImage() { throw new NotImplementedException(); }
-        public string ExportToCSV() { throw new NotImplementedException(); }
     }
 }
